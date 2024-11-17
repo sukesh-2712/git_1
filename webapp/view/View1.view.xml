@@ -1,0 +1,94 @@
+<mvc:View
+    controllerName="git1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:UI="sap.ui.table"
+    xmlns:f="sap.f"
+    xmlns:layout="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:unified="sap.ui.unified"
+    height="100%"
+    xmlns:svm="sap.ui.comp.smartvariants"  
+    xmlns:columnmenu="sap.m.table.columnmenu"
+    xmlns:sap.ui.fl="sap.ui.fl"
+    xmlns:sap.ui.dt="sap.ui.dt"
+    xmlns:vm="sap.ui.fl.variants"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    >
+   
+ 
+    <f:DynamicPage id="dynamicPageId" headerExpanded="true" toggleHeaderOnTitleClick="true" class="sapUiResponsiveContentPadding" showFooter="true">
+        <f:title>
+            <f:DynamicPageTitle id="_IDGenDynamicPageTitle">
+                <f:heading>
+                   <HBox id="_IDGenHBox" justifyContent="Center" alignItems="Center">
+ 
+                <Image id="_IDGenHBox12"
+                    src="../asset/logo.jpg"
+                    decorative="false" height="30%" width="35%"
+                    alt="Logo" />
+           
+</HBox>
+                </f:heading>
+               
+             
+                <f:content>
+                    <OverflowToolbar id="_IDGenOverflowToolbar" class="centeredToolbar">
+                    <ToolbarSpacer id="_IDGenToolbarSpacer" />
+                   
+                        <Title id="_IDGenTitle" text="" />
+       
+                   
+                    </OverflowToolbar>
+                </f:content>
+            </f:DynamicPageTitle>
+        </f:title>
+ 
+        <f:header>
+                <f:DynamicPageHeader id="_IDGenDynamicPageHeader">
+                    <f:content>
+                   
+                        <fb:FilterBar id="filterbar"  useToolbar="false" search=".onSearch" filterChange=".onFilterChange"
+  afterVariantLoad=".onAfterVariantLoad">
+                            <fb:filterGroupItems>
+                                <fb:FilterGroupItem name="Document" label="Document Number" groupName="Group1" visibleInFilterBar="true">
+                                    <fb:control>
+                                    <MultiInput id="Doc" valueHelpRequest="onDocSearch" >
+                                    </MultiInput>
+                                    </fb:control>
+                                </fb:FilterGroupItem>
+                                <fb:FilterGroupItem name="Order_Type" label="Order_Type" groupName="Group1" visibleInFilterBar="true">
+                                    <fb:control>
+                                        <MultiInput id="Order_Type" valueHelpRequest="onOrdertypeSearch">
+                                        </MultiInput>
+                                    </fb:control>
+                                </fb:FilterGroupItem>
+                                <fb:FilterGroupItem name="Delivery_Date" label="Delivery Date" groupName="Group1" visibleInFilterBar="true">
+                                    <fb:control>
+                                       
+                                            <DatePicker
+                   
+                    placeholder="Enter Date"
+                      id="Datepicker"
+            displayFormat="MM-dd-yyyy"
+                    />
+                                    </fb:control>
+                                </fb:FilterGroupItem>
+                               
+                            </fb:filterGroupItems>
+                        </fb:FilterBar>
+                    </f:content>
+                 
+                </f:DynamicPageHeader>
+            </f:header>
+ 
+        <f:content>
+
+        </f:content>
+ 
+    </f:DynamicPage>
+</mvc:View>
+ 
+ 
+ 
